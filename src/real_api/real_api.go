@@ -28,5 +28,5 @@ func Request(ctx *http_context.Context) (*raw_ad.RawAdObj, error) {
 }
 
 func (s *RealApi) request(ctx *http_context.Context) (*raw_ad.RawAdObj, error) {
-	return huicheng.Request(s.conf.HuichengApi, 100, ctx)
+	return huicheng.Request(s.conf.HuichengApi, 1000, ctx)
 }
