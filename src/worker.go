@@ -11,7 +11,6 @@ import (
 	"cache"
 	"cpt"
 	"creative"
-	"dump"
 	"ios_pmt"
 	"rank"
 	"real_api"
@@ -81,29 +80,11 @@ func main() {
 		panic(err)
 	}
 
-	checkTpl()
-
 	aes.Init(&conf.AesConf)
 	util.Init(&conf.UtilConf)
-	rank.Init(&conf.RankConf)
-	cache.Init(&conf.RedisConf)
-	cpt.Init(&conf.CptConf)
-	ios_pmt.Init(&conf.IOSPmtConf)
-	creative.Init(&conf.CreativeConf)
-	subscription.Init(&conf.Subscription)
 	real_api.Init(&conf.RealApi)
 
-	aff := affiliate.NewAffiliate(&conf.AffiliateConf)
-	if aff == nil {
-		panic("aff nil")
-	}
-	go aff.Serve()
-
 	go startRetrievalService(&conf.RetrievalConf)
-	go startUpdateService(&conf.UpdateConf)
-	go dump.Serve(conf.DumpAddr)
-
-	go tpl.StartTlServer(&conf.TplConf)
 
 	status.Serve()
 }
