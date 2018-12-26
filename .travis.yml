@@ -1,0 +1,20 @@
+sudo: required
+language: go
+
+os: linux
+
+go:
+  - 1.7
+
+before_install:
+  - sudo apt-get install -y protobuf-compiler
+  - make deps
+
+script:
+  - make
+  - make test
+
+notifications:
+  slack:
+    on_success: always
+    on_failure: always

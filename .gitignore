@@ -1,0 +1,14 @@
+bin/*
+tags
+logs/*
+vars.mk
+*.log
+*.swp
+start.sh
+mock_data/
+.idea
+pkg
+gob/*
+!gob/.gitkeep
+tpl_files/*
+ignore_dir

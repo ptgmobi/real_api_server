@@ -1,0 +1,22 @@
+version: 0.0
+os: linux
+files:
+  - source: ./
+    destination: /opt/offer_server/
+hooks:
+  BeforeInstall:
+    - location: code_deploy_scripts/before_install.sh
+      timeout: 120
+      runas: root
+  AfterInstall:
+    - location: code_deploy_scripts/after_install.sh
+      timeout: 1200
+      runas: root
+  ApplicationStart:
+    - location: code_deploy_scripts/application_start.sh
+      timeout: 30
+      runas: root
+  ValidateService:
+    - location: code_deploy_scripts/validate_service.sh
+      timeout: 30
+      runas: root

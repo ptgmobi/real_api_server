@@ -1,0 +1,240 @@
+{
+    "ios_pmt_config": {
+        "bf_config": {
+            "bloom_filter_n": 16800000,
+            "bloom_filter_fp": 0.00001, 
+            "bloom_filter_path": "/pdata1/offer_server_data/apple_ip_filter/apple_bloom_filter"
+        },
+        "bundle_file_conf": "/pdata1/bundles/ios_pmt_pkg",
+        "region_conf": "http://internal-regionelb-1295136801.ap-southeast-1.elb.amazonaws.com:19999/get?ip="
+    },
+    "affiliate_config": {
+        "listen_addr": ":9993",
+        "tokens": [
+            {
+                "aff_token": "d8827f2811ee6fbaa9a0fc087a1f8446",
+                "slot": "335",
+                "allowed_channels": ["tym"],
+                "discount": 0.88
+            },
+            {
+                "aff_token": "2ed9b3054a3fffa4f9a0a9d533174a13",
+                "slot": "415",
+                "allowed_channels": ["tym"],
+                "discount": 0.88
+            }
+        ]
+    },
+    "util_config": {
+        "ngp_doc_cap": {
+            "com.google.android.youtube": 3,
+            "org.videolan.vlc": 10,
+            "com.kmplayer": 100
+        },
+        "ngp_slot": {
+            "260": true,
+            "247": true
+        },
+        "promote_click_count": {
+            "nwby_303147675": 2,
+            "nwby_14308583": 2,
+            "nwby_14307480": 2,
+            "wby_303147665": 2,
+            "wby_357548487": 2,
+            "wby_393518583": 2
+        },
+        "pkg_black_offer": [
+            "com.sgn.pandapop.gp",
+            "com.sgn.geniesandgems.gp",
+            "air.com.sgn.juicejam.gp"
+        ],
+        "black_offers":[],
+        "replacing_slot_id":"915"
+    },
+    "aes_config": {
+        "key": ""
+    },
+    "cache_config": {
+        "hosts": "10.17.8.59,10.17.11.110,10.17.14.34",
+        "ports": "6379,6379,6379"
+    },
+    "offer_target": {                                                                                  
+        "offer_target_slot_fmt": "http://10.17.5.57/api/v2/pull-offers/%d/%d?t=3CdfhPDRphp3h5tc",
+        "promote_filter_fmt": ""
+    },
+    "cpt_config": [
+        {
+            "offers": ["nym_offline128"],
+            "start_time": "2017-09-21 16:00:00",
+            "end_time": "2017-09-25 16:00:00",
+            "slots": [
+                {
+                    "slot_id": "756",
+                    "img_h":10,
+                    "img_w":10
+                },
+                {
+                    "slot_id": "757",
+                    "img_h":10,
+                    "img_w":19
+                }
+            ]
+        },
+        {
+            "offers": ["nym_offline143"],
+            "start_time": "2017-09-19 16:00:00",
+            "end_time": "2017-09-20 16:00:00",
+            "slots": [
+                {
+                    "slot_id": "402",
+                    "img_h":0,
+                    "img_w":0
+                },
+                {
+                    "slot_id": "403",
+                    "img_h":0,
+                    "img_w":0
+                },
+                {
+                    "slot_id": "2074",
+                    "img_h":0,
+                    "img_w":0
+                },
+                {
+                    "slot_id": "2075",
+                    "img_h":0,
+                    "img_w":0
+                }
+            ]
+        }
+    ],
+    "template_config": {
+        "s3_region": "",
+        "s3_bucket": "",
+        "ssp_prefix": "",
+        "down_path": "",
+        "tcp_listen_port": 11111,
+        "appinfo_pull_fmt": "http://10.17.5.57/api/v2/pull-app/%d/%d?t=3CdfhPDRphp3h5tc",
+        "slotinfo_pull_fmt": "http://10.17.5.57/api/v2/pull-slot/%d/%d?t=3CdfhPDRphp3h5tc",
+        "video_sort_url": "http://internal-RankELB-2138725667.ap-southeast-1.elb.amazonaws.com:9986/video?user_hash=",
+    },
+    "update_config": {
+        "ym_aff_id": "103107",
+        "nym_aff_id": "101703",
+        "tym_aff_id": "104329",
+        "iym_aff_id": "102557",
+        "stpym_aff_id": "104535",
+        "inym_aff_id": "104534",
+        "jpym_aff_id": "104748",
+        "jpym2_aff_id": "104798",
+        "vym_aff_id": "104484",
+        "v1ym_aff_id": "108343",
+        "n1ym":"107053",
+        "n2ym":"107054",
+        "n3ym":"107055",
+        "sym":"107056",
+        "ym_notify_location": "/notify/v1/ym",
+        "all_notify_location": "/notify/v1/all",
+        "notify_addr": ":9990",
+        "fuyu_offer_api": "http://10.17.5.52:12000/pre/list?status=on",
+        "temp_black_offer_api": "http://10.17.5.52:12000/list?temp=true&status=off",
+        "permanent_black_offer_api": "http://10.17.5.52:12000/list?temp=false&status=off",
+        "replace_slot_id_offer_api": "http://www.cloudmobi.net/api/v2/pull-risky-campaign/1/20?t=3CdfhPDRphp3h5tc",
+        "channel_offer_filter_api": "http://www.cloudmobi.net/api/v2/pull-white-offer/1/20?t=3CdfhPDRphp3h5tc",
+        "ssp_imp_api": "http://10.17.5.57/api/v3/pull-slot-rate?t=3CdfhPDRphp3h5tc",
+        "dash_imp_api": "http://10.17.6.37:9987/get/impression?from=%s&to=%s&slot=%s",
+        "dash_complete_api": "http://10.17.6.37:9987/get/video?from=%s&to=%s&slot=%s",
+        "log_path": "/pdata1/log/offer/update.log",
+        "log_rotate_backup": 6,
+        "log_rotate_lines": 100000,
+        "channel_status": {
+            "ym": true,
+            "vym": true
+        },
+        "offer_bucket": "",
+        "offer_key": "",
+        "channel_key": "",
+        "down_path": "",
+        "vast_server_url": "http://vast.cloudmobi.net:54321/update",
+        "wugan_rate_api": "http://10.17.5.57/api/pull-country-info?t=3CdfhPDRphp3h5tc",
+        "channel_status_api": "http://10.17.5.57/api/pull-ad-network?page=%d&page_size=%d&t=3CdfhPDRphp3h5tc",
+        "offer_update_api": "http://10.17.0.187:17771/dump?channel=",
+        "vast_server_url": "http://vast2.cloudmobi.net:16661/update",
+        "pacing_api": "http://10.17.5.52:13000/dump/pacing"
+    },
+    "retrieval_config": {
+        "autoscaling_group_name": "OfferServerNewASG",
+        "autoscaling_group_region": "ap-southeast-1",
+        "listen_port": 19991,
+        "path": "/getad",
+        "native_path": "/get_native_ad",
+        "promotion_path": "/get_promote_ad",
+        "video_path": "/get_video_ad",
+        "wugan_path": "/get_wugan_ad",
+        "funny_path": "/get_funny",
+        "jstag_path": "/get_jstag_ad",
+        "jstag_h5_path": "/get_jstag_h5_ad",
+        "app_wall_path": "/get_appwall_ad",
+        "ngp_path": "/get_ngp_ad",
+        "interstitial_path": "/get_interstitial_ad",
+        "pagead_path": "/get_pagead",
+        "jstag_media_path": "/get_jstag_media_ad",
+        "pagead_static_base_url": "http://static.cloudmobi.net/pagead/"
+        "life_path": "/get_life_ad",
+        "ngp_server_api": "http://52.221.205.188:15001/download",
+        "vast_server_api": "",
+        "vast_js_url": "",
+        "vast_js_url_cn": "",
+        "log_path": "/pdata1/log/offer/retrieval.log",
+        "log_rotate_backup": 6,
+        "log_rotate_lines": 100000,
+        "ios_pre_imp_tks": [],
+        "ios_pre_clk_tks": [],
+        "ios_post_imp_tks": ["https://logger2.cloudmobi.net/ios/v1/impression"],
+        "ios_post_clk_tks": ["https://logger2.cloudmobi.net/ios/v1/click"],
+        "android_pre_imp_tks": [],
+        "android_pre_clk_tks": [],
+        "android_post_imp_tks": ["http://logger2.cloudmobi.net/android/v1/impression"],
+        "android_post_clk_tks": ["http://logger2.cloudmobi.net/android/v1/click"],
+        "glp_black_slot": [
+            "293",
+            "297"
+        ],
+        "global_black_slot": [
+            "278",
+            "397"
+        ],
+        "test_slots": [
+            "538",
+            "539",
+            "552"
+        ]
+    },
+    "subscription": {
+        "report_url": "http://logger.cloudmobi.net/android/v1/subreport?id=%s_%d&adtype=12&click_id=%s",
+        "sub_country": [
+        {
+            "channel": "kok",
+            "country": ["CN" ],
+            "weight": 20
+        },
+        {
+            "channel": "mop",
+            "country": ["CN", "HK", "US"],
+            "weight": 80
+        }
+        ]
+    },
+    "rank_config": {
+        "rank_apis": [
+            "http://internal-RankELB-2138725667.ap-southeast-1.elb.amazonaws.com:9986/rank"
+        ]
+    },
+    "click_config": {
+        "api_addr": "http://10.17.5.52:12000"
+    },
+    "creative_config": {
+        "creative_info_manager_url": "http://10.17.5.52:12121/get_creative_id?"
+    },
+    "dump_addr": ":9992"
+}

@@ -1,0 +1,1 @@
+[{"id":1,"app_id":1,"slot_name":"\u5e7f\u544a\u540d1","filter":"1,2,3,4,5","format":2,"templates":[{"type":1,"h5":"<h3>Black Perl</h3>","id":5},{"type":2,"h5":"<h1>Hello World</h1>","id":8}],"frequency_switch":0,"frequency_daily":0,"frequency_hour":0,"slot_switch":2,"create_time":0,"update_time":1468394395000}]

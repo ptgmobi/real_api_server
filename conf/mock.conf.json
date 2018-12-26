@@ -1,0 +1,59 @@
+{
+    "data": {
+        "yeahmobi": "mock_data/yeahmobi_mock"
+    },
+    "affiliate_config": {
+        "listen_addr": ":9993",
+        "tokens": [
+            {
+                "aff_token": "8888",
+                "slot": "299",
+                "discount": 0.8
+            },
+            {
+                "aff_token": "9999",
+                "slot": "301",
+                "discount": 0.9
+            }
+        ]
+    },
+    "template_config": {
+        "tcp_listen_port": 11111,
+        "appinfo_pull_fmt": "http://ssp.cloudtechmob.com/api/pull_app/p/%d/pagesize/%d",
+        "slotinfo_pull_fmt": "http://ssp.cloudtechmob.com/api/pull_slot/p/%d/pagesize/%d"
+    },
+    "update_config": {
+        "yeahmobi_product_api":"http://api.yeahmobi.com/v1/Apps/get?api_token=398490749b1&devapp_id=131",
+        "yeahmobi_product_api_old":"http://api.yeahmobi.com/v1/Apps/get?api_token=050fc0af-cb&devapp_id=9",
+        "log_path": "logs/update.log",
+        "log_rotate_backup": 3,
+        "log_rotate_lines": 100000
+    },
+    "retrieval_config": {
+        "listen_port": 19991,
+        "path": "/getad",
+        "native_path": "/get_native_ad",
+        "realtime_path": "/get_realtime_ad",
+        "promotion_path": "/get_promote",
+        "log_path": "logs/retrieval.log",
+        "log_rotate_backup": 3,
+        "log_rotate_lines": 100000,
+        "template_host": "127.0.0.1",
+        "template_port": 33333,
+        "template_path": "/get_tl",
+        "ios_pre_imp_tks": [],
+        "ios_pre_clk_tks": [],
+        "ios_post_imp_tks": ["http://logger.cloudmobi.net/ios/v1/impression"],
+        "ios_post_clk_tks": ["http://logger.cloudmobi.net/ios/v1/click"],
+        "android_pre_imp_tks": [],
+        "android_pre_clk_tks": [],
+        "android_post_imp_tks": ["http://logger.cloudmobi.net/android/v1/impression"],
+        "android_post_clk_tks": ["http://logger.cloudmobi.net/android/v1/click"]
+    },
+    "rank_config": {
+        "rank_apis": [
+            "http://api.cloudmobi.net:9986/rank"
+        ]
+    },
+    "dump_addr": ":9992"
+}
