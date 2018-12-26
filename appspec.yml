@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: ./
-    destination: /opt/offer_server/
+    destination: /opt/real_api_server/
 hooks:
   BeforeInstall:
     - location: code_deploy_scripts/before_install.sh
