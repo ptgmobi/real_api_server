@@ -64,7 +64,7 @@ func (item *Item) ToRawAdObj() (*raw_ad.RawAdObj, error) {
 	app.Desc = item.Desc
 	app.Rate = rand.Float32() + 4
 	app.TrackLink = item.ClkUrl
-	raw.Icons["ALL"] = item.ToImg()
+	raw.Icons["ALL"], raw.Creatives["ALL"] = item.ToImg(), item.ToImg()
 
 	for _, track := range item.Trackers {
 		if track.Type == "show" {
