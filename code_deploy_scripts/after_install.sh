@@ -2,20 +2,11 @@
 
 echo "after install start"
 
-protoc --version
-if [ "$?" != "0" ]; then
-    yum install -y protobuf-compiler
-fi
-
 region=$(cat ~/.aws/config | grep region | awk -F' = ' '{print $2}')
 
 bucket=""
 if [ "$region" == "ap-southeast-1" ]; then
     bucket=cloudmobi-config
-elif [ "$region" == "cn-north-1" ]; then
-    bucket=cloudmobi-cn
-else
-    exit 1
 fi
 
 echo "after install: bucket: ${bucket}"
@@ -28,9 +19,6 @@ pushd /opt/offer_server
 
 echo "after install: sync: s3://${bucket}/offer-server/conf/"
 aws s3 sync s3://${bucket}/offer-server/conf/ conf/
-
-echo "after install: sync: s3://${bucket}/offer-server/tpl_files/"
-aws s3 sync s3://${bucket}/offer-server/tpl_files/ tpl_files/
 
 apple_ip_filter_dir="/pdata1/offer_server_data/apple_ip_filter"
 if [ ! -d "${apple_ip_filter_dir}" ]; then
