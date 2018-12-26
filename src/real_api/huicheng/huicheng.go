@@ -48,7 +48,7 @@ func (item *Item) ToImg() []raw_ad.Img {
 func (item *Item) ToRawAdObj() (*raw_ad.RawAdObj, error) {
 	raw := raw_ad.NewRawAdObj()
 
-	raw.Id = ""
+	raw.Id = "360offer"
 	raw.Channel = "huicheng"
 	raw.FinalUrl = item.Deeplink
 	if item.Action == 1 {
