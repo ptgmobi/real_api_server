@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pushd /opt/offer_server
+pushd /opt/real_api_server
 
 killall tguard
 killall tworker
