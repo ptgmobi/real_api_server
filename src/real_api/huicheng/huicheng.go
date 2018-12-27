@@ -64,7 +64,13 @@ func (item *Item) ToRawAdObj() (*raw_ad.RawAdObj, error) {
 	app.Desc = item.Desc
 	app.Rate = rand.Float32() + 4
 	app.TrackLink = item.ClkUrl
-	raw.Icons["ALL"], raw.Creatives["ALL"] = item.ToImg(), item.ToImg()
+	if imgs := item.ToImg(); len(imgs) != 0 {
+		raw.Icons["ALL"] = imgs
+		raw.Creatives["ALL"] = imgs
+	} else {
+		return nil, fmt.Errorf("huicheng offer no imgs")
+	}
+	raw.ContentType = 2 // 2：下载类
 
 	for _, track := range item.Trackers {
 		if track.Type == "show" {
