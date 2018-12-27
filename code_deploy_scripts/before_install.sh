@@ -1,5 +1,5 @@
 #!/bin/bash
 
-rm -rf /opt/offer_server
+rm -rf /opt/real_api_server
 exit 0
 
