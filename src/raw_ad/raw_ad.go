@@ -939,6 +939,8 @@ func (raw *RawAdObj) genThirdPartyImpTk(ctx *http_context.Context) string {
 		return ""
 	case "cht":
 		return ""
+	case "huicheng":
+		return ""
 	default:
 		ctx.L.Println("genThirdPartyImpTkArg error, un-handled channel of:", raw.Channel)
 		return ""
