@@ -11,6 +11,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/satori/go.uuid"
+
 	"http_context"
 )
 
@@ -90,7 +92,7 @@ func Request(api string, timeout int, ctx *http_context.Context) (*raw_ad.RawAdO
 
 	now := time.Now()
 	params := make([]string, 0, 16)
-	params = append(params, "bid="+strconv.Itoa(time.Now().Nanosecond()))
+	params = append(params, fmt.Sprintf("bid=%s", uuid.Must(uuid.NewV4())))
 	params = append(params, "ver=1.2")
 	params = append(params, "width="+strconv.Itoa(ctx.ImgW))
 	params = append(params, "height="+strconv.Itoa(ctx.ImgH))
